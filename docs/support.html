@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Support — QR Scanner Pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
+
+    <style>
+        .faq-item {
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            margin-bottom: 12px;
+            overflow: hidden;
+            transition: box-shadow var(--transition);
+        }
+        .faq-item:hover {
+            box-shadow: var(--shadow-sm);
+        }
+        .faq-question {
+            padding: 20px 24px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            background: var(--surface);
+        }
+        .faq-question:hover {
+            background: var(--surface-2);
+        }
+        .faq-arrow {
+            transition: transform var(--transition);
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+        }
+        .faq-answer {
+            padding: 0 24px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+        }
+        .faq-item.open .faq-answer {
+            max-height: 400px;
+            padding: 0 24px 20px;
+        }
+        .faq-item.open .faq-arrow {
+            transform: rotate(180deg);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+        .contact-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            text-align: center;
+            transition: all var(--transition);
+        }
+        .contact-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary);
+        }
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            display: block;
+        }
+        .contact-card h3 {
+            margin-bottom: 8px;
+        }
+        .contact-card p {
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-inner">
+                <a href="index.html" class="nav-logo">
+                    <div class="nav-logo-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24"
+                             fill="none" stroke="white" stroke-width="2"
+                             stroke-linecap="round">
+                            <path d="M3,7L3,5C3,3.9 3.9,3 5,3L7,3"/>
+                            <path d="M17,3L19,3C20.1,3 21,3.9 21,5L21,7"/>
+                            <path d="M21,17L21,19C21,20.1 20.1,21 19,21L17,21"/>
+                            <path d="M7,21L5,21C3.9,21 3,20.1 3,19L3,17"/>
+                            <path d="M3,12L21,12"/>
+                        </svg>
+                    </div>
+                    QR Scanner Pro
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="privacy-policy.html">Privacy</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li>
+                        <a href="https://play.google.com/store/apps/details?id=com.trident.qrscannerpro"
+                           class="nav-cta" target="_blank">
+                            Get the App
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="legal-page">
+
+        <div class="legal-hero">
+            <div class="container">
+                <h1>Help & Support</h1>
+                <p>
+                    Find answers to common questions or get in touch
+                </p>
+            </div>
+        </div>
+
+        <div class="legal-content" style="max-width:860px;">
+
+            <!-- FAQ Section -->
+            <h2 style="border:none; margin-top:0;">
+                Frequently Asked Questions
+            </h2>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Why is the camera not working?
+                    <span class="faq-arrow">▾</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        QR Scanner Pro requires camera permission to
+                        scan codes. Go to your device
+                        <strong>Settings → Apps → QR Scanner Pro
+                        → Permissions → Camera</strong>
+                        and make sure Camera permission is enabled.
+                        Then restart the app.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    The flashlight button is not showing. Why?
+                    <span class="faq-arrow">▾</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        The flashlight button is only shown on devices
+                        that have a physical flash unit. If your device
+                        does not have a flash or the camera does not
+                        support torch mode, the button will be hidden
+                        automatically.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    A QR code is not scanning. What should I do?
+                    <span class="faq-arrow">▾</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Try the following steps:</p>
+                    <ul style="margin:8px 0 0 20px;
+                               color:var(--text-secondary);">
+                        <li style="margin-bottom:6px;">
+                            Ensure the code is well-lit. Use the
+                            flashlight button in dark environments.
+                        </li>
+                        <li style="margin-bottom:6px;">
+                            Hold the device steady and ensure the
+                            entire code is within the scan frame.
+                        </li>
+                        <li style="margin-bottom:6px;">
+                            Clean your camera lens if it is smudged.
+                        </li>
+                        <li>
+                            Try moving slightly closer or further
+                            from the code.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    How do I export my scan history?
+                    <span class="faq-arrow">▾</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        Go to the <strong>History</strong> tab and
+                        tap the <strong>Export CSV</strong> button at
+                        the bottom right. A short ad will play, after
+                        which your complete scan history will be
+                        exported as a CSV file that you can open in
+                        any spreadsheet application.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    How do I delete my scan history?
+                    <span class="faq-arrow">▾</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        To delete individual scans, swipe left on
+                        any scan item in the History tab. To clear
+                        all history at once, tap the
+                        <strong>Clear All</strong> button at the
+                        bottom right of the History tab.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    What QR code types can I generate?
+                    <span class="faq-arrow">▾</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        QR Scanner Pro can generate QR codes for
+                        9 different types of content:
+                    </p>
+                    <ul style="margin:8px 0 0 20px;
+                               color:var(--text-secondary);">
+                        <li style="margin-bottom:4px;">
+                            URL / Website
+                        </li>
+                        <li style="margin-bottom:4px;">
+                            Contact card (vCard)
+                        </li>
+                        <li style="margin-bottom:4px;">
+                            WiFi network credentials
+                        </li>
+                        <li style="margin-bottom:4px;">
+                            Plain text
+                        </li>
+                        <li style="margin-bottom:4px;">
+                            Email with subject and body
+                        </li>
+                        <li style="margin-bottom:4px;">
+                            Phone number
+                        </li>
+                        <li style="margin-bottom:4px;">
+                            SMS message
+                        </li>
+                        <li style="margin-bottom:4px;">
+                            GPS coordinates
+                        </li>
+                        <li>App Store link</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Does the app work offline?
+                    <span class="faq-arrow">▾</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        Yes. All scanning and QR code generation
+                        features work completely offline. An internet
+                        connection is only required to load
+                        advertisements.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    How do I connect to WiFi using a QR code?
+                    <span class="faq-arrow">▾</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        On Android 10 and above, scanning a WiFi QR
+                        code will automatically prompt you to join the
+                        network. On Android 9 and below, the app will
+                        show you the network name and password in a
+                        dialog so you can connect manually.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    What is Batch Scan mode?
+                    <span class="faq-arrow">▾</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        Batch Scan mode lets you scan multiple codes
+                        in one session without interruption. Tap
+                        <strong>Batch: OFF</strong> in the scanner
+                        to enable it. All scanned codes are collected
+                        and you can review them all at once by tapping
+                        <strong>View Batch Results</strong>.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <h2>Get in Touch</h2>
+            <p>
+                Can't find an answer? We're here to help.
+                Usually respond within 24 hours.
+            </p>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <span class="contact-icon">✉️</span>
+                    <h3>Email Support</h3>
+                    <p>
+                        Send us a detailed description of your issue
+                        and we will get back to you as soon as possible.
+                    </p>
+                    <a href="mailto:tridentinc01@gmail.com"
+                       class="btn-primary"
+                       style="display:inline-flex;
+                              font-size:0.9rem;
+                              padding:12px 24px;">
+                        tridentinc01@gmail.com
+                    </a>
+                </div>
+
+                <div class="contact-card">
+                    <span class="contact-icon">⭐</span>
+                    <h3>Rate the App</h3>
+                    <p>
+                        Enjoying QR Scanner Pro? A rating on the
+                        Play Store helps other users discover the app
+                        and motivates further development.
+                    </p>
+                    <a href="https://play.google.com/store/apps/details?id=com.trident.qrscannerpro"
+                       class="btn-primary"
+                       style="display:inline-flex;
+                              font-size:0.9rem;
+                              padding:12px 24px;"
+                       target="_blank">
+                        Rate on Play Store
+                    </a>
+                </div>
+            </div>
+
+            <!-- Version info -->
+            <div class="legal-card" style="margin-top:48px;">
+                <p style="font-size:0.85rem; color:var(--text-secondary);">
+                    <strong>App Version:</strong> 1.0.0 ·
+                    <strong>Minimum Android:</strong> 7.0 (API 24) ·
+                    <strong>Target Android:</strong> 15 (API 35)
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <span>
+                    © <span id="current-year"></span>
+                    QR Scanner Pro. All rights reserved.
+                </span>
+                <span>
+                    <a href="privacy-policy.html">Privacy Policy</a> ·
+                    <a href="terms.html">Terms</a> ·
+                    <a href="support.html">Support</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('click', () => {
+                const item = q.parentElement;
+                const isOpen = item.classList.contains('open');
+                // Close all
+                document.querySelectorAll('.faq-item').forEach(i => {
+                    i.classList.remove('open');
+                });
+                // Open clicked if it was closed
+                if (!isOpen) item.classList.add('open');
+            });
+        });
+    </script>
+</body>
+</html>
