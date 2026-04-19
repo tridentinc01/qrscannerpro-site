@@ -1,34 +1,131 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 64 64" width="64" height="64">
-    <rect width="64" height="64" rx="14" fill="#1A73E8"/>
-    <!-- TL corner -->
-    <rect x="10" y="10" width="16" height="16"
-          rx="2" fill="white"/>
-    <rect x="13" y="13" width="10" height="10"
-          rx="1" fill="#1A73E8"/>
-    <rect x="15" y="15" width="6" height="6"
+     viewBox="0 0 512 512" width="512" height="512">
+
+    <defs>
+        <radialGradient id="bg" cx="50%" cy="40%"
+                        r="65%" fx="50%" fy="30%">
+            <stop offset="0%"   stop-color="#1A73E8"
+                  stop-opacity="1"/>
+            <stop offset="45%"  stop-color="#0F2E5E"
+                  stop-opacity="1"/>
+            <stop offset="100%" stop-color="#050E1F"
+                  stop-opacity="1"/>
+        </radialGradient>
+        <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%"
+                  stop-color="#00E676" stop-opacity="0.25"/>
+            <stop offset="100%"
+                  stop-color="#00E676" stop-opacity="0"/>
+        </radialGradient>
+        <filter id="shadow" x="-10%" y="-10%"
+                width="120%" height="120%">
+            <feDropShadow dx="0" dy="4" stdDeviation="8"
+                          flood-color="#000000"
+                          flood-opacity="0.4"/>
+        </filter>
+    </defs>
+
+    <!-- Background -->
+    <rect width="512" height="512" rx="115"
+          fill="url(#bg)"/>
+
+    <!-- Specular highlight -->
+    <path d="M0,0 L512,0 L512,200
+             C380,260 130,215 0,256 Z"
+          fill="white" fill-opacity="0.05" rx="115"/>
+
+    <!-- Corner brackets -->
+    <!-- Top-left -->
+    <path d="M82,82 L178,82 L178,100 L100,100 L100,178 L82,178 Z"
           fill="white"/>
-    <!-- TR corner -->
-    <rect x="38" y="10" width="16" height="16"
-          rx="2" fill="white"/>
-    <rect x="41" y="13" width="10" height="10"
-          rx="1" fill="#1A73E8"/>
-    <rect x="43" y="15" width="6" height="6"
+    <!-- Top-right -->
+    <path d="M430,82 L334,82 L334,100 L412,100 L412,178 L430,178 Z"
           fill="white"/>
-    <!-- BL corner -->
-    <rect x="10" y="38" width="16" height="16"
-          rx="2" fill="white"/>
-    <rect x="13" y="41" width="10" height="10"
-          rx="1" fill="#1A73E8"/>
-    <rect x="15" y="43" width="6" height="6"
+    <!-- Bottom-left -->
+    <path d="M82,430 L178,430 L178,412 L100,412 L100,334 L82,334 Z"
           fill="white"/>
-    <!-- Data dots -->
-    <rect x="38" y="38" width="5" height="5" fill="white"/>
-    <rect x="45" y="38" width="5" height="5" fill="white"/>
-    <rect x="38" y="45" width="5" height="5" fill="white"/>
-    <rect x="51" y="45" width="5" height="5" fill="white"/>
-    <rect x="45" y="51" width="5" height="5" fill="white"/>
-    <!-- Scan line -->
-    <rect x="8" y="30" width="48" height="3"
-          rx="1.5" fill="#00C853" opacity="0.9"/>
+    <!-- Bottom-right -->
+    <path d="M430,430 L334,430 L334,412 L412,412 L412,334 L430,334 Z"
+          fill="white"/>
+
+    <!-- Top-left finder pattern -->
+    <rect x="112" y="112" width="112" height="112"
+          rx="12" fill="white" filter="url(#shadow)"/>
+    <rect x="126" y="126" width="84"  height="84"
+          rx="8" fill="#050E1F"/>
+    <rect x="142" y="142" width="52"  height="52"
+          rx="6" fill="white"/>
+
+    <!-- Top-right finder pattern -->
+    <rect x="288" y="112" width="112" height="112"
+          rx="12" fill="white" filter="url(#shadow)"/>
+    <rect x="302" y="126" width="84"  height="84"
+          rx="8" fill="#050E1F"/>
+    <rect x="318" y="142" width="52"  height="52"
+          rx="6" fill="white"/>
+
+    <!-- Bottom-left finder pattern -->
+    <rect x="112" y="288" width="112" height="112"
+          rx="12" fill="white" filter="url(#shadow)"/>
+    <rect x="126" y="302" width="84"  height="84"
+          rx="8" fill="#050E1F"/>
+    <rect x="142" y="318" width="52"  height="52"
+          rx="6" fill="white"/>
+
+    <!-- Data modules — bottom right -->
+    <rect x="288" y="288" width="28" height="28"
+          rx="4" fill="white" fill-opacity="0.95"/>
+    <rect x="326" y="288" width="28" height="28"
+          rx="4" fill="white" fill-opacity="0.55"/>
+    <rect x="364" y="288" width="28" height="28"
+          rx="4" fill="white" fill-opacity="0.95"/>
+    <rect x="402" y="288" width="28" height="28"
+          rx="4" fill="white" fill-opacity="0.70"/>
+    <rect x="288" y="326" width="28" height="28"
+          rx="4" fill="white" fill-opacity="0.70"/>
+    <rect x="326" y="326" width="28" height="28"
+          rx="4" fill="white" fill-opacity="0.95"/>
+    <rect x="364" y="326" width="28" height="28"
+          rx="4" fill="white" fill-opacity="0.40"/>
+    <rect x="402" y="326" width="28" height="28"
+          rx="4" fill="white" fill-opacity="0.95"/>
+    <rect x="288" y="364" width="28" height="28"
+          rx="4" fill="white" fill-opacity="0.95"/>
+    <rect x="326" y="364" width="28" height="28"
+          rx="4" fill="white" fill-opacity="0.40"/>
+    <rect x="364" y="364" width="28" height="28"
+          rx="4" fill="white" fill-opacity="0.95"/>
+    <rect x="402" y="364" width="28" height="28"
+          rx="4" fill="white" fill-opacity="0.55"/>
+    <rect x="288" y="402" width="28" height="28"
+          rx="4" fill="white" fill-opacity="0.55"/>
+    <rect x="326" y="402" width="28" height="28"
+          rx="4" fill="white" fill-opacity="0.95"/>
+    <rect x="364" y="402" width="28" height="28"
+          rx="4" fill="white" fill-opacity="0.70"/>
+    <rect x="402" y="402" width="28" height="28"
+          rx="4" fill="white" fill-opacity="0.95"/>
+
+    <!-- Scan line glow -->
+    <rect x="76" y="238" width="360" height="36"
+          fill="url(#glow)"/>
+    <rect x="76" y="244" width="360" height="24"
+          fill="#00C853" fill-opacity="0.20"/>
+    <rect x="76" y="248" width="360" height="16"
+          fill="#00E676" fill-opacity="0.45"/>
+
+    <!-- Scan line core -->
+    <rect x="76" y="252" width="360" height="8"
+          rx="4" fill="#00E676"/>
+
+    <!-- Endpoint dots -->
+    <circle cx="76"  cy="256" r="14"
+            fill="#00C853" fill-opacity="0.25"/>
+    <circle cx="76"  cy="256" r="8"
+            fill="#00E676"/>
+    <circle cx="436" cy="256" r="14"
+            fill="#00C853" fill-opacity="0.25"/>
+    <circle cx="436" cy="256" r="8"
+            fill="#00E676"/>
+
 </svg>
